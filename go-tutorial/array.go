@@ -1,6 +1,8 @@
 package go_tutorial
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	var a [2]string

@@ -14,7 +14,7 @@ var DATA = make(map[int]bool)
 func random(min, max int) int {
 	return rand.Intn(max-min) + min
 }
-
+// 只写channel
 func first(min, max int, out chan<- int) {
 	for {
 		if CLOSEA {
@@ -28,6 +28,7 @@ func first(min, max int, out chan<- int) {
 	}
 }
 
+// 只读channel
 func second(out chan<- int, in <-chan int) {
 	for x := range in {
 		fmt.Printf("get number %d\n", x)
@@ -45,6 +46,7 @@ func second(out chan<- int, in <-chan int) {
 	close(out)
 }
 
+// 只读channel
 func third(in <-chan int) {
 	var sum int
 	sum = 0
