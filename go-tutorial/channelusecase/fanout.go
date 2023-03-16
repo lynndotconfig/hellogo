@@ -65,9 +65,6 @@ func fanOutUnbuffered(ch <- chan int, size int) []chan int {
 }
 
 
-// func chanFanOut(chn interface{}) []interface{} {
-// 	cs := make([]reflect.
-// }
 
 
 func main() {

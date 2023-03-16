@@ -1,4 +1,4 @@
-package godesign
+package main
 
 type Speed float64
 
